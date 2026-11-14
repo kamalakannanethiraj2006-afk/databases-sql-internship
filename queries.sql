@@ -60,5 +60,15 @@ INNER JOIN Enrollments
     ON Students.student_id = Enrollments.student_id
 INNER JOIN Courses
     ON Enrollments.course_id = Courses.course_id;
+-- QUESTION 2:
+-- Display student names and their payment amounts.
+
+SELECT
+    Students.student_name,
+    Payments.amount
+FROM Students
+INNER JOIN Payments
+    ON Students.student_id = Payments.student_id;
+
 
 
