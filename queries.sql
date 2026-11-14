@@ -69,6 +69,19 @@ SELECT
 FROM Students
 INNER JOIN Payments
     ON Students.student_id = Payments.student_id;
+-- QUESTION 3:
+-- Display each student's total payment amount.
+
+SELECT
+    Students.student_name,
+    SUM(Payments.amount) AS total_payment
+FROM Students
+INNER JOIN Payments
+    ON Students.student_id = Payments.student_id
+GROUP BY
+    Students.student_id,
+    Students.student_name;
+
 
 
 
